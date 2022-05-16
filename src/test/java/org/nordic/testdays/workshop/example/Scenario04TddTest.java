@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 /**
  * TDD for bugfix
  */
-public class Scenario4TddTest {
+public class Scenario04TddTest {
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
     private final BuggyValidator validator = new BuggyValidator();
 

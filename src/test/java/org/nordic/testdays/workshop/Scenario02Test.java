@@ -16,7 +16,7 @@ import static org.nordic.testdays.workshop.data.model.BookingStatus.SUCCESS;
  * - Given - When - Then
  * - Use mocks under "Assert one thing"
  */
-public class Scenario2Test {
+public class Scenario02Test {
     private final RestaurantEnquiryService restaurantEnquiryService = new RestaurantEnquiryServiceImpl();
     private final MembershipSystem membershipService = new MembershipSystem();
     private final BookingValidator bookingValidator = new BookingValidator();

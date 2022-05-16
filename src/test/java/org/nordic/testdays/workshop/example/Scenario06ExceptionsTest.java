@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Testing for Exceptions
  */
-public class Scenario6ExceptionsTest {
+public class Scenario06ExceptionsTest {
     private final BookingValidator bookingValidator = new BookingValidator();
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
 

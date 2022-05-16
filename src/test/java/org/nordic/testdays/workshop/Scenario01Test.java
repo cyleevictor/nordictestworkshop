@@ -15,7 +15,7 @@ import static org.hamcrest.core.Is.is;
  * - Assert one thing
  * - Naming of methods and variables
  */
-public class Scenario1Test {
+public class Scenario01Test {
     private final RestaurantEnquiryService restaurantEnquiryService = new RestaurantEnquiryServiceImpl();
     private final BookingService bookingService = new BookingService(restaurantEnquiryService);
 

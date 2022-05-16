@@ -1,4 +1,4 @@
-package org.nordic.testdays.workshop.example;
+package org.nordic.testdays.workshop;
 
 import org.junit.jupiter.api.Test;
 import org.nordic.testdays.workshop.data.model.BookingRequest;
@@ -12,26 +12,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Boundary Testing
  */
-public class Scenario5BoundaryTest {
+public class Scenario05BoundaryTest {
     private final BookingValidator bookingValidator = new BookingValidator();
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
+
+    //TODO: create test cases to cover checking for different number of people: positive, zero, negative
 
     @Test
     void validate_peopleIs2_ReturnTrue() {
         BookingRequest bookingRequest = createBookingRequestFor(2);
         assertTrue(bookingValidator.validate(bookingRequest));
-    }
-
-    @Test
-    void validate_peopleIs0_ReturnFalse() {
-        BookingRequest bookingRequest = createBookingRequestFor(0);
-        assertFalse(bookingValidator.validate(bookingRequest));
-    }
-
-    @Test
-    void validate_peopleIsNegative_ReturnFalse() {
-        BookingRequest bookingRequest = createBookingRequestFor(-1);
-        assertFalse(bookingValidator.validate(bookingRequest));
     }
 
     private BookingRequest createBookingRequestFor(int numberOfPeople) {

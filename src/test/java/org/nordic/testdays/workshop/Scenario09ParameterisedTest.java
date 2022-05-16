@@ -19,7 +19,7 @@ import static org.nordic.testdays.workshop.data.model.BookingStatus.SUCCESS;
 /**
  * Parameterised Test
  */
-public class Scenario9ParameterisedTest {
+public class Scenario09ParameterisedTest {
     private final RestaurantEnquiryService restaurantEnquiryService = mock(RestaurantEnquiryService.class);
     private final BookingService bookingService = new BookingService(restaurantEnquiryService);
 

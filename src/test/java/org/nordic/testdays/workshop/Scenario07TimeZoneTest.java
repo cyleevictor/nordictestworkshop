@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Time Zone issues
  **/
-public class Scenario7TimeZoneTest {
+public class Scenario07TimeZoneTest {
     private final BookingTimeChecker bookingTimeChecker = new BookingTimeChecker();
     LocalDateTime sunday0605 = LocalDateTime.of(2022, 6, 5, 0, 0);
 

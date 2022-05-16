@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * Sensible error message
  */
-public class Scenario3Test {
+public class Scenario03Test {
     private final BookingValidator bookingValidator = new BookingValidator();
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
 

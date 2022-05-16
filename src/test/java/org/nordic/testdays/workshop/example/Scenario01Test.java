@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
  * - Assert one thing
  * - Naming of methods and variables
  */
-public class Scenario1Test {
+public class Scenario01Test {
     private final LocalDateTime bookingDateTime =  LocalDateTime.of(2022, 6, 5, 18, 0, 0);
     private final RestaurantEnquiryService restaurantEnquiryService = mock(RestaurantEnquiryService.class);
     private final BookingService bookingService = new BookingService(restaurantEnquiryService);

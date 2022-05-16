@@ -6,7 +6,6 @@ import org.nordic.testdays.workshop.validator.BookingValidator;
 
 import java.time.LocalDateTime;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Testing for Exceptions
  */
-public class Scenario6ExceptionsTest {
+public class Scenario06ExceptionsTest {
     private final BookingValidator bookingValidator = new BookingValidator();
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
 
