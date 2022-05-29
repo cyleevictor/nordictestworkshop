@@ -41,20 +41,4 @@ public class Scenario10MultiThreadedTest {
         asyncBookingService.book(bookingRequest);
         verify(bookingService).addBooking(bookingRequest);
     }
-
-    @Test
-    void bookAsync_withControlledRunnable() throws ExecutionException, InterruptedException {
-        Executor executor = Runnable::run;
-
-        AsyncBookingService asyncBookingService = new AsyncBookingService(executor, bookingService);
-        asyncBookingService.book(bookingRequest);
-        verify(bookingService).addBooking(bookingRequest);
-    }
-
-    @Test
-    void bookAsync_withMockedExecutor() throws ExecutionException, InterruptedException {
-        AsyncBookingService asyncBookingService = new AsyncBookingService(testExecutor, bookingService);
-        asyncBookingService.book(bookingRequest);
-        verify(bookingService).addBooking(bookingRequest);
-    }
 }
