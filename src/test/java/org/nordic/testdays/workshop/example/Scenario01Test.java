@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.nordic.testdays.workshop.RestaurantEnquiryService;
 import org.nordic.testdays.workshop.data.model.BookingRecord;
 import org.nordic.testdays.workshop.data.model.BookingStatus;
-import org.nordic.testdays.workshop.version1.BookingService;
+import org.nordic.testdays.workshop.service.BookingService;
 
 import java.time.LocalDateTime;
 

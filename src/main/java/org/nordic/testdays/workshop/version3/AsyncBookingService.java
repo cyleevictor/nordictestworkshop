@@ -1,7 +1,7 @@
 package org.nordic.testdays.workshop.version3;
 
 import org.nordic.testdays.workshop.data.model.BookingRequest;
-import org.nordic.testdays.workshop.version2.BookingServiceV2;
+import org.nordic.testdays.workshop.service.BookingServiceV2;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

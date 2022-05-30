@@ -1,9 +1,10 @@
-package org.nordic.testdays.workshop;
+package org.nordic.testdays.workshop.example;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.nordic.testdays.workshop.RestaurantEnquiryService;
 import org.nordic.testdays.workshop.data.model.BookingRecord;
 import org.nordic.testdays.workshop.data.model.BookingStatus;
 import org.nordic.testdays.workshop.service.BookingService;
@@ -29,11 +30,9 @@ public class Scenario09ParameterisedTest {
         LocalDateTime bookingDateTime1 = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
         LocalDateTime bookingDateTime2 = LocalDateTime.of(2022, 6, 7, 11, 0, 0);
         LocalDateTime bookingDateTime3 = LocalDateTime.of(2022, 6, 6, 18, 0, 0);
-
-        //Not type safe -- no error on compilation time
         return Stream.of(
                 Arguments.of("Tony", 2, bookingDateTime1, SUCCESS),
-                Arguments.of(null, "Three", bookingDateTime2, FAILED),
+                Arguments.of(null, 3, bookingDateTime2, FAILED),
                 Arguments.of("Helen", -1, bookingDateTime3, FAILED)
         );
     }

@@ -16,6 +16,7 @@ public class Scenario08RandomTest {
     private BookingValidator validator = new BookingValidator();
     private final LocalDateTime bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
 
+    //TODO: this test case could be flaky - sometimes it passes and sometimes it fails
     @Test
     void validate_WithRandomNumOfPeople_ReturnTrue() {
         int randomNumber = generateRandomNumber();

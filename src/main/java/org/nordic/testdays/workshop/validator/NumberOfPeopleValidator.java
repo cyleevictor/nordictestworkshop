@@ -2,17 +2,12 @@ package org.nordic.testdays.workshop.validator;
 
 import org.nordic.testdays.workshop.data.model.BookingRequest;
 
-public class BuggyValidator {
-
-    //TODO: Fix this method to make test passes
+public class NumberOfPeopleValidator {
     public boolean validate(BookingRequest request) {
         boolean result;
 
-        if (request.getRestaurantId() == null) {
-            result = false;
-        }
-
-        if (request.getNumberOfPeople() < 1) {
+        //TODO: Fix this -- should check people <=0 instead
+        if (request.getNumberOfPeople() < 0) {
             result = false;
         } else {
             result = true;

@@ -23,7 +23,8 @@ public class Scenario04TddTest {
 
     @Test
     void validate_restaurantIsEmpty_ReturnFalse() {
-        //TODO: validate should return false when restaurant is null
+        //TODO: validate should return false when restaurant is null but there is a bug.
+        // How can we come up with a test case that could capture the bug?
     }
 
     private BookingRequest createBookingRequest(String restaurantId, int numberOfPeople) {

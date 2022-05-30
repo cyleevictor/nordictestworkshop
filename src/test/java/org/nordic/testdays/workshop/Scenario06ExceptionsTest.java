@@ -23,7 +23,7 @@ public class Scenario06ExceptionsTest {
         assertThrows(RuntimeException.class, () -> bookingValidator.validate(bookingRequest));
     }
 
-    //This is expected to fail as test setup is wrong
+    //TODO: This is expected to fail as test setup is wrong. How can we fix this?
     @Test
     void validate_MemberIdIsNull_ExceptionThrown() {
         BookingRequest bookingRequest = new BookingRequest("request1", bookingDateTime, null, null, 2);

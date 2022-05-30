@@ -26,7 +26,7 @@ public class Scenario06ExceptionsTest {
         assertThat(exception.getMessage(), is("Invalid input for Restaurant"));
     }
 
-    //Fixed
+    //Another way to assert exception thrown
     @Test
     void validate_RestaurantIsNull_ExceptionThrown_v2() {
         BookingRequest bookingRequest = new BookingRequest("request1", bookingDateTime, null, "memberId1", 2);
@@ -39,7 +39,7 @@ public class Scenario06ExceptionsTest {
         }
     }
 
-    //This test will be fixed with a given restaurantId, and production code fixed
+    //This test case is fixed with a given restaurantId, and with the buggy production code fixed this should pass. Check code under BookingValidator
     @Test
     void validate_MemberIdIsNull_ExceptionThrown() {
         BookingRequest bookingRequest = new BookingRequest("request1", bookingDateTime, "CrazyChicken", null, 2);

@@ -1,4 +1,4 @@
-package org.nordic.testdays.workshop.version2;
+package org.nordic.testdays.workshop.service;
 
 import org.nordic.testdays.workshop.MembershipSystem;
 import org.nordic.testdays.workshop.RestaurantEnquiryService;
@@ -53,6 +53,11 @@ public class BookingServiceV2 {
             return BookingStatus.SUCCESS;
         }
         return BookingStatus.FAILED;
+    }
+
+    public boolean exists(String requestId) {
+        //TODO: Implement checking if request could be found from bookingRecords
+        return false;
     }
 
     private BookingRecord createBookingRecord(BookingRequest bookingRequest, BookingStatus status, String bookedBy, boolean member) {

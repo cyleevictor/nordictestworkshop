@@ -4,12 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.nordic.testdays.workshop.data.model.BookingRequest;
 import org.nordic.testdays.workshop.data.model.BookingStatus;
 import org.nordic.testdays.workshop.validator.BookingValidator;
-import org.nordic.testdays.workshop.version2.BookingServiceV2;
+import org.nordic.testdays.workshop.service.BookingServiceV2;
 
 import java.time.LocalDateTime;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.nordic.testdays.workshop.data.model.BookingStatus.FAILED;
 import static org.nordic.testdays.workshop.data.model.BookingStatus.SUCCESS;
 
 /**
@@ -30,5 +31,13 @@ public class Scenario02Test {
         bookingRequest = new BookingRequest("request1", bookingDateTime, "CrazyChicken", "memberId1", 2);
         BookingStatus bookingStatus = bookingService.addBooking(bookingRequest);
         assertThat(bookingStatus, is(SUCCESS));
+    }
+
+    @Test
+    void addBooking_unknownRestaurant_Failed() {
+        bookingDateTime = LocalDateTime.of(2022, 6, 5, 18, 0, 0);
+        bookingRequest = new BookingRequest("request1", bookingDateTime, "ANONYMOUS", "memberId1", 2);
+        BookingStatus bookingStatus = bookingService.addBooking(bookingRequest);
+        assertThat(bookingStatus, is(FAILED));
     }
 }

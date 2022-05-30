@@ -21,7 +21,7 @@ public class Scenario04TddTest {
         assertFalse(validator.validate(bookingRequest));
     }
 
-    //This test will pass when production code is fixed
+    //This test should pass when production code is fixed
     @Test
     void validate_restaurantIsEmpty_ReturnFalse() {
         BookingRequest bookingRequest = createBookingRequest(null, 2);

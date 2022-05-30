@@ -1,4 +1,4 @@
-package org.nordic.testdays.workshop.version1;
+package org.nordic.testdays.workshop.service;
 
 import org.nordic.testdays.workshop.RestaurantEnquiryService;
 import org.nordic.testdays.workshop.data.model.BookingRecord;
