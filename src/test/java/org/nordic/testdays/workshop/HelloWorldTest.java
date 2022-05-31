@@ -10,7 +10,7 @@ class HelloWorldTest {
     private final String name = "Your name";
 
     @Test
-    void send_helloWorld_ownName() {
+    void send_helloWorld_nameMatched() {
         String result = helloWorld.send("Your name");
         assertThat(result, is(name));
     }
