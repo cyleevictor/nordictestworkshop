@@ -4,7 +4,6 @@ import org.nordic.testdays.workshop.data.model.BookingRequest;
 import org.nordic.testdays.workshop.service.BookingServiceV2;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 
 public class AsyncBookingService {
@@ -16,7 +15,7 @@ public class AsyncBookingService {
         this.bookingService = bookingService;
     }
 
-    public void book(BookingRequest bookingRequest) throws ExecutionException, InterruptedException {
+    public void book(BookingRequest bookingRequest) {
         CompletableFuture.runAsync(() -> {
             sleep(2000);
             bookingService.addBooking(bookingRequest);
