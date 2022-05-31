@@ -8,7 +8,7 @@ public class BuggyValidator {
     public boolean validate(BookingRequest request) {
         boolean result;
 
-        if (request.getRestaurantId() == null) {
+        if (request.getRestaurantId() == null || request.getRestaurantId().isEmpty()) {
             result = false;
         }
 
